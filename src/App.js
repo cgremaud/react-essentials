@@ -1,4 +1,5 @@
 import './App.css';
+import banner from './zizekbanner.jpg'
 
 function Header(props) {
   return(
@@ -12,6 +13,7 @@ function Main(props) {
   return(
     <section>
       <p>We got dat {props.adjective} food</p>
+      <img src = {banner} height = {400} width={800} alt = "Vaporwave banner"/>
       <ul style = {{textAlign: "left"}}>
         {props.dishes.map((dish) => ( //use parens when returning an obj from a map func
           <li key = {dish.id}>{dish.title}</li>
@@ -33,7 +35,7 @@ function Footer(props) {
 const dishes = [
   "Halibut",
   "Spam and Eggs",
-  "Creamed Cum",
+  "Creamed Corn",
   "Hot and Bothered Bagel"
 ];
 
