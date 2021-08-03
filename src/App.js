@@ -17,17 +17,23 @@ function App({login}) {
       .then(response => response.json())
       .then(setData)
       .then(() => setLoading(false))
-      .catch(setError);
-  }, [login])
+      .catch(setError); //don't use setError(true)
+  }, [login]) //passing [login] to the dependency array causes this to be called when the value of login changes. 
   
   if(loading) return <h1>Loading . . .</h1>
   if(error) return <pre>{JSON.stringify(error, null, 2)}</pre>
   if(!data) return null
 
-  return (<div>
+  return (<div className="container">
     <h1>{data.name}</h1>
     <p>{data.url} </p>
-    <img alt={data.login} src={data.avatar_url} />
+    <ul>
+      <li>bro</li>
+      <li>bro</li>
+      <li>bro</li>
+    </ul>
+    <button className="btn-info">text</button>
+    <img alt={data.name} src={data.avatar_url} />
   </div>)
   
 }
