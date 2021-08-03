@@ -1,57 +1,19 @@
 import './App.css';
-import banner from './zizekbanner.jpg'
 
-function Header(props) {
-  return(
-    <header>
-      <h1>{props.name}'s restaurant</h1>
-    </header>
-  )
+function SecretComponent() {
+  return <h1> Super secret info for blah blah</h1>
 }
 
-function Main(props) {
-  return(
-    <section>
-      <p>We got dat {props.adjective} food</p>
-      <img src = {banner} height = {400} width={800} alt = "Vaporwave banner"/>
-      <ul style = {{textAlign: "left"}}>
-        {props.dishes.map((dish) => ( //use parens when returning an obj from a map func
-          <li key = {dish.id}>{dish.title}</li>
-          ))}
-      </ul>
-    </section>
-  )
+function RegularComponent() {
+  return <h1>Everyone can see this</h1>
 }
 
-function Footer(props) {
-  return(
-    <footer>
-      Copyright {props.year}
-    </footer>
-  )
-}
-
-
-const dishes = [
-  "Halibut",
-  "Spam and Eggs",
-  "Creamed Corn",
-  "Hot and Bothered Bagel"
-];
-
-const dishObjects = dishes.map((dish, i) => ({ id: i, title: dish }))
-
-
-
-
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <Header name="Colyn" />
-      <Main adjective="amazing" dishes={dishObjects}/>
-      <Footer year={new Date().getFullYear()}/>
-    </div>
-  );
+    <>
+      {props.authorized ? <SecretComponent /> : <RegularComponent />}
+    </>
+  )
 }
 
 export default App;
