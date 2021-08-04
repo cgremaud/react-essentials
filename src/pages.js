@@ -47,7 +47,8 @@ export function Nav() {
     <nav>
     <span className="row">
         <span className="col-1" align="left"><button className="btn btn-info "><Link to="/">Home</Link></button> </span>
-        <span className="col-7" align="center" width="50px"><button className="btn btn-info"><Link to="/about">About</Link> </button>
+        <span className="col-7" align="center" width="50px">
+        <button className="btn btn-info"><Link to="/about">About</Link> </button>
         <button className="btn btn-info"><Link to="/events">Events</Link></button> </span>
         <span className="col-1" align="right"><button className="btn btn-info"><Link to="/contact">Contact</Link></button> </span>
     </span>
