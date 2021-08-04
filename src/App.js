@@ -51,10 +51,7 @@ function App() {
     </Route>
 
     <Route component={Whoops404}></Route>
-
-    {/* <Route path="*"  >
-      <Whoops404 />
-    </Route> */}
+    
     </Switch>        
   </div>)
   
