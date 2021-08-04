@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
   // https://api.github.com/users/cgremaud
 
-function App({}) {
+function App() {
   
   // const [data, setData] = useState(null);
   // const [loading, setLoading] = useState(false);
